@@ -1,4 +1,4 @@
-package com.example;
+package pvin.tools;
 
 import io.micronaut.configuration.picocli.PicocliRunner;
 import java.io.IOException;
@@ -29,7 +29,7 @@ public class EpochConverterCommand implements Runnable {
   @Option(names = {"-z", "--zone"}, description = "The time zone", defaultValue = "UTC")
   String zone;
 
-  public static void main(String[] args) throws Exception {
+  public static void main(String[] args) {
     PicocliRunner.run(EpochConverterCommand.class, args);
   }
 
