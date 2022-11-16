@@ -1,46 +1,46 @@
 plugins {
-    id("com.github.johnrengelman.shadow") version "7.1.0"
-    id("io.micronaut.application") version "3.0.2"
+  id("com.github.johnrengelman.shadow") version "7.1.0"
+  id("io.micronaut.application") version "3.0.2"
 }
 
 version = "0.1"
 group = "tv2-pvin.tools"
 
 repositories {
-    mavenCentral()
+  mavenCentral()
 }
 
 micronaut {
-    testRuntime("junit5")
-    processing {
-        incremental(true)
-        annotations("com.example.*")
-    }
-    version('3.2.3')
+  testRuntime("junit5")
+  processing {
+    incremental(true)
+    annotations("com.example.*")
+  }
+  version('3.2.3')
 }
 
 dependencies {
-    annotationProcessor("info.picocli:picocli-codegen")
-    implementation("info.picocli:picocli")
-    implementation("io.micronaut:micronaut-runtime")
-    implementation("io.micronaut.picocli:micronaut-picocli")
-    implementation("jakarta.annotation:jakarta.annotation-api")
-    runtimeOnly("ch.qos.logback:logback-classic")
-    implementation("io.micronaut:micronaut-validation")
-    // https://mvnrepository.com/artifact/org.json/json
-    implementation 'org.json:json:20220924'
+  annotationProcessor("info.picocli:picocli-codegen")
+  implementation("info.picocli:picocli")
+  implementation("io.micronaut:micronaut-runtime")
+  implementation("io.micronaut.picocli:micronaut-picocli")
+  implementation("jakarta.annotation:jakarta.annotation-api")
+  runtimeOnly("ch.qos.logback:logback-classic")
+  implementation("io.micronaut:micronaut-validation")
+  // https://mvnrepository.com/artifact/org.json/json
+  implementation 'org.json:json:20220924'
 
 
-    testImplementation("io.micronaut:micronaut-http-client")
+  testImplementation("io.micronaut:micronaut-http-client")
 
 }
 
 
 application {
-    mainClass.set("com.example.EpochConverterCommand")
+  mainClass.set("com.example.EpochConverterCommand")
 }
 java {
-    sourceCompatibility = JavaVersion.toVersion("17")
-    targetCompatibility = JavaVersion.toVersion("17")
+  sourceCompatibility = JavaVersion.toVersion("17")
+  targetCompatibility = JavaVersion.toVersion("17")
 }
 
