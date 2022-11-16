@@ -26,7 +26,7 @@ public class EpochConverterCommand implements Runnable {
       "--keys"}, required = true, description = "The key to convert", split = ",")
   List<String> keys;
 
-  @Option(names = {"-z", "--zone"}, description = "The time zone", defaultValue = "Europe/Copenhagen")
+  @Option(names = {"-z", "--zone"}, description = "The time zone", defaultValue = "UTC")
   String zone;
 
   public static void main(String[] args) throws Exception {

@@ -4,7 +4,7 @@ plugins {
 }
 
 version = "0.1"
-group = "com.example"
+group = "tv2-pvin.tools"
 
 repositories {
     mavenCentral()
