@@ -70,7 +70,17 @@ public class EpochConverterCommand implements Runnable {
       var value = jsonObject.get(key);
 
       if (value instanceof JSONArray jsonArray) {
-        jsonArray.forEach(item -> convertEpochs((JSONObject) item));
+        jsonArray.forEach(item -> {
+          if (item instanceof JSONObject jo) {
+            convertEpochs(jo);
+          } else if (item instanceof String s) {
+            try {
+              var l = Long.parseLong(s);
+              convertEpoch(l);
+            } catch (NumberFormatException ignored) {
+            }
+          }
+        });
       }
 
       if (value instanceof JSONObject jo) {
