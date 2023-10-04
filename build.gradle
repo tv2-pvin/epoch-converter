@@ -37,7 +37,7 @@ dependencies {
 
 
 application {
-  mainClass.set("com.example.EpochConverterCommand")
+  mainClass.set("pvin.tools.EpochConverterCommand")
 }
 java {
   sourceCompatibility = JavaVersion.toVersion("17")

@@ -217,3 +217,7 @@ gradle-app.setting
 *.hprof
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,linux,macos,intellij+all,java,gradle
+
+
+src/main/resources/tmp.json
+src/main/resources/tmp-converted.json

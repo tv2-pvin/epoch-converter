@@ -100,7 +100,7 @@ public class EpochConverterCommand implements Runnable {
 
     return ZonedDateTime.ofInstant(
         java.time.Instant.ofEpochMilli(value),
-        ZoneId.of(zone)
+        ZoneId.of("Europe/Copenhagen")
     );
   }
 }
